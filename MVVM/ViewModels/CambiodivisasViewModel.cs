@@ -34,7 +34,7 @@ namespace MVVM.ViewModels
                 {
                     _valorEUR = value;
                     OnPropertyChanged();
-                    CambiarEurosADolares();
+                    //CambiarEurosADolares();
                 }
             }
         }

@@ -8,8 +8,8 @@
     Title="MVVM">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        Title="CambioDivisas"
+        ContentTemplate="{DataTemplate local:CambioDivisas}"
         Route="MainPage" />
 
 </Shell>
