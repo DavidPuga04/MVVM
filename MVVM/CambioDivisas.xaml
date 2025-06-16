@@ -5,8 +5,9 @@
              x:Class="MVVM.CambioDivisas"
              Title="CambioDivisas">
     <ContentPage.BindingContext>
-        <local:CambiodivisasViewModel>
+        <local:CambiodivisasViewModel></local:CambiodivisasViewModel>
     </ContentPage.BindingContext>
+
 
     <VerticalStackLayout>
         <Image
@@ -30,5 +31,6 @@
             x:Name="BotonReiniciar"
             Text="Reiniciar Valores"
             Command="{Binding ComandoReiniciarValores}"
+            />
     </VerticalStackLayout>
 </ContentPage>

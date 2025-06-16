@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace MVVM.ViewModels
 {
@@ -37,6 +38,19 @@ namespace MVVM.ViewModels
                     //CambiarEurosADolares();
                 }
             }
+        }
+
+        public ICommand ComandoReiniciarValores { get; set; }
+
+        public CambiodivisasViewModel()
+        {
+            ComandoReiniciarValores = new Command(async ()=> await ReiniciarValores());
+        }
+
+        public async Task ReiniciarValores()
+        {
+            ValorUSD = "0";
+            ValorEUR = "0";
         }
 
         public void CambiarDeDolaresAEuros()
