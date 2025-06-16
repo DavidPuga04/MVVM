@@ -55,17 +55,31 @@ namespace MVVM.ViewModels
 
         public void CambiarDeDolaresAEuros()
         {
-            double euros= Double.Parse(ValorUSD)*0.87;
-            ValorEUR = euros.ToString();
-
+            if (double.TryParse(ValorUSD, out double dolares))
+            {
+                double euros = dolares * 0.87;
+                ValorEUR = euros.ToString("0.00");
+            }
+            else
+            {
+                ValorEUR = "0.00";
+            }
         }
+
 
         public void CambiarEurosADolares()
         {
-            double dolares = Double.Parse(ValorEUR) * 1.15;
-            ValorUSD = dolares.ToString();
-
+            if (double.TryParse(ValorEUR, out double euros))
+            {
+                double dolares = euros * 1.15;
+                ValorUSD = dolares.ToString("0.00");
+            }
+            else
+            {
+                ValorUSD = "0.00";
+            }
         }
+
 
 
         public event PropertyChangedEventHandler? PropertyChanged;
